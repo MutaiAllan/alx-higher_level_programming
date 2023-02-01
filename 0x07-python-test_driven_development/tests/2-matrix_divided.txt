@@ -17,6 +17,14 @@ Matrix must be a list of integers or floats.
 	>>> print(matrix_divided(matrix, 3))
 	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 
+An empty listof lists will succeed
+	>>> matrix = [
+	...	[],
+	...	[]
+	... ]
+	>>> print(matrix_divided(matrix, 3))
+	[[], []]
+
 Invalid Arguments
 =================
 
