@@ -1,0 +1,61 @@
+How to use 2-matrix_divided.py
+==============================
+
+This module defines a matrix division function.
+
+usage
+=====
+
+Importing function to main file.
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Matrix must be a list of integers or floats.
+	>>> matrix = [
+	...	[1, 2, 3],
+	...	[4, 5, 6]
+	... ]
+	>>> print(matrix_divided(matrix, 3))
+	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Invalid Arguments
+=================
+
+A TypeError is raised if ``matrix`` is not a list of lists.
+	>>> matrix = [1, 2, 3, 4]
+	>>> print(matrix_divided(matrix, 3))
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+	>>> matrix = "Allan"
+	>>> print(matrix_divided(matrix, 3))
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+A TypeError is rasied if matrix is empty.
+	>>> matrix = []
+	>>> print(matrix_divided(matrix, 3))
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+A TypeError is raised if the length of the lists is not the same.
+	>>> matrix = [
+	... 	[1, 2, 3],
+	... 	[4, 5, 6, 7]
+	... ]
+	>>> print(matrix_divided(matrix, 3))
+	Traceback (most recent call last):
+	TypeError: Each row of the matrix must have the same size
+
+A TypeError is rasied if ``div`` is not an int/float.
+	>>> matrix = [
+	...	[1, 2, 3],
+	...	[4, 5, 6]
+	... ]
+	>>> print(matrix_divided(matrix, 't'))
+	Traceback (most recent call last):
+	TypeError: div must be a number
+
+A ZeroDivisionError is raised if ``div`` is zero.
+	>>> print(matrix_divided(matrix, 0))
+	Traceback (most recent call last):
+	ZeroDivisionError: division by zero
