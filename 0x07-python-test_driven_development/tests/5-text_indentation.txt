@@ -1,0 +1,42 @@
+How to use 5-text_indentation.py
+================================
+
+IMPORTING
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+USAGE
+	>>> text_indentation("I am Allan. I'm a student at ALX Africa.")
+	I am Allan.
+	<BLANKLINE>
+	I'm a student at ALX Africa.
+	<BLANKLINE>
+
+	>>> text_indentation("Name: Allan. Job? Software engineer")
+	Name:
+	<BLANKLINE>
+	Allan.
+	<BLANKLINE>
+	Job?
+	<BLANKLINE>
+	Software engineer
+
+INVALID ARGS
+	>>> text_indentation(None)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation(var)
+	Traceback (most recent call last):
+	NameError: name 'var' is not defined
+
+	>>> text_indentation(40)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation(1.5)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation()
+	Traceback (most recent call last):
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
