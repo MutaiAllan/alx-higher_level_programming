@@ -20,6 +20,19 @@ USAGE
 	<BLANKLINE>
 	Software engineer
 
+	>>> text_indentation("Allan.Kiprop")
+	Allan.
+	<BLANKLINE>
+	iprop
+
+	>>> text_indentation("Allan.Kiprop:Mutai?")
+	Allan.
+	<BLANKLINE>
+	iprop:
+	<BLANKLINE>
+	utai?
+	<BLANKLINE>
+
 INVALID ARGS
 	>>> text_indentation(None)
 	Traceback (most recent call last):
