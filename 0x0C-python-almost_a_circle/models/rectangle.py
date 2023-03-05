@@ -80,8 +80,10 @@ class Rectangle(Base):
     def display(self):
         """Prints the Rectangle with #"""
         i = 0
+        print("\n" * self.__y, end="")
         while i < self.height:
             j = 0
+            print(" " * self.__x, end="")
             while j < self.width:
                 print("#", end="")
                 j += 1
